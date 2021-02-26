@@ -1,0 +1,22 @@
+version: "3"
+services:
+    frontend:
+        container_name: pokeapi_client
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        image: coronoz/pokeapi_client
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./client:/usr/src/app
+    backend:
+        container_name: pokeapi_server
+        build:
+            context: ./server
+            dockerfile: Dockerfile
+        image: coronoz/pokeapi_server
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./server:/usr/src/app
