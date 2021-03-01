@@ -30,11 +30,11 @@ exports.getPokemonByName = (pokemonName) => {
   return axios.get(url)
     .then((res) => {
       if (!res.data) {
-        throw new Error();
+        throw new Error(404);
       }
       return res.data;
     })
     .catch((error) => {
-      throw new Error(error);
+      throw error;
     });
 };
