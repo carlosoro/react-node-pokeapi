@@ -6,6 +6,4 @@ WORKDIR /usr/src/app
 
 EXPOSE 5000
 
-CMD [ "npm", "install" ]
-
 CMD [ "npm", "run", "dev" ]
