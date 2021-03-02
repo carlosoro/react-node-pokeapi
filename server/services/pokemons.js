@@ -1,8 +1,6 @@
 const axios = require('axios');
 
-const BASE_URL = 'https://pokeapi.co/api/v2';
-
-const getPokemons = (url) => axios
+const getPokemons = async (url) => axios
   .get(url)
   .then((res) => {
     if (!res.data.results) {
@@ -15,7 +13,8 @@ const getPokemons = (url) => axios
   });
 
 exports.getAllPokemons = async (limit = 10000, offset = 0, pokemons = []) => {
-  const page = `${BASE_URL}/pokemon?limit=${limit}&offset=${offset}`;
+  const pokeApiEndpoint = process.env.POKE_API_ENDPOINT;
+  const page = `${pokeApiEndpoint}/pokemon?limit=${limit}&offset=${offset}`;
   const pokemonsSet = await getPokemons(page);
   pokemons.push(...pokemonsSet.results);
   if (pokemonsSet.count > pokemons.length) {
@@ -26,7 +25,8 @@ exports.getAllPokemons = async (limit = 10000, offset = 0, pokemons = []) => {
 };
 
 exports.getPokemonByName = (pokemonName) => {
-  const url = `${BASE_URL}/pokemon/${pokemonName}`;
+  const pokeApiEndpoint = process.env.POKE_API_ENDPOINT;
+  const url = `${pokeApiEndpoint}/pokemon/${pokemonName}`;
   return axios.get(url)
     .then((res) => {
       if (!res.data) {
