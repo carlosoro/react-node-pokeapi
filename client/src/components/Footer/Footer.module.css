@@ -1,0 +1,14 @@
+.FooterContent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AlignLeft {
+	float: left;
+    font-weight: bold;
+}
+
+.AlignRight {
+	float: right;
+}

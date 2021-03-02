@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import SearchForm from './components/SearchForm/SearchForm'
+import 'nes.css/css/nes.min.css';
+import SearchPokemon from './components/SearchPokemon/SearchPokemon';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-        <SearchForm />
+      <Header />
+      <SearchPokemon />
+      <Footer />
     </div>
   );
 }

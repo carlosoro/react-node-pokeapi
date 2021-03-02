@@ -14,12 +14,12 @@
     },
     "overrides": [
         {
-            "files": ["./lib/*", "**.test.js"],
+            "files": ["./services/*", "**.test.js"],
             "rules": {
                 "no-param-reassign": "off",
                 "no-undef": "off"
             }
         }
     ],
-    "ignorePatterns": ["node_modules/**", "coverage/**", "*.config.js", "index.js"]
+    "ignorePatterns": ["build", "node_modules/**", "coverage/**", "*.config.js", "app.js"]
 }
