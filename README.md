@@ -9,6 +9,8 @@ You want to see a running demo? click [here](https://coronoz-pokefinder.herokuap
 
 ## Starting the project
 ```bash
+  cp client/.env.example client/.env
+  cp server/.env.example server/.env
   docker-compose up
 ```
 <p>After both client and server finished starting, you can access to the app through http://localhost:3000<p>
