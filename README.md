@@ -1,5 +1,7 @@
 # Pokefinder
 
+You want to see a running demo? click [here](https://coronoz-pokefinder.herokuapp.com/)
+
 ## Dependencies
     If you want to run the environment locally you will need:
     - Docker
@@ -9,14 +11,19 @@
 ```bash
   docker-compose up
 ```
-Now you can access to the React client through http://localhost:3000 and the Node API through http://localhost:5000
+<p>After both client and server finished starting, you can access to the app through http://localhost:3000<p>
 
-## Running the server tests with coverage
+## Running the client linter
 ```bash
-  docker exec pokeapi_server npm run test-coverage
+docker exec pokeapi_client npm run lint
 ```
 
 ## Running the server linter
 ```bash
   docker exec pokeapi_server npm run lint
+```
+
+## Running the server tests with coverage
+```bash
+  docker exec pokeapi_server npm run test-coverage
 ```
