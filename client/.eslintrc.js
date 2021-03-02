@@ -22,4 +22,5 @@ module.exports = {
   rules: {
       "react/jsx-filename-extension": [0]
   },
+  ignorePatterns: ["*.test.js"]
 };
